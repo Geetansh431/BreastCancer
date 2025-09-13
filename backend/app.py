@@ -121,8 +121,11 @@ def health():
     """Health check endpoint"""
     return jsonify({'status': 'healthy', 'model_loaded': model is not None})
 
+# Load model when app starts (regardless of how it's started)
+print("Loading breast cancer detection model...")
+load_model()
+print("Model loaded successfully!")
+
 if __name__ == '__main__':
-    print("Loading breast cancer detection model...")
-    load_model()
     print("Starting Flask server...")
     app.run(debug=True, host='0.0.0.0', port=5000)

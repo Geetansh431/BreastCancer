@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import { Activity, Heart, AlertTriangle, CheckCircle, Loader, Info, Download, Upload, RotateCcw } from 'lucide-react';
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://breastcancer-4cit.onrender.com';
 
 function App() {
   const [features, setFeatures] = useState({});
